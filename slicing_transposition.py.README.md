@@ -1,0 +1,3 @@
+# TARP
+This function accepts an image file and a password as input and performs 8-bit slicing on the image, dividing it into 8 images, each representing a distinct bit plane. Each bit plane image is transposed, causing the image to rotate 90 degrees anticlockwise. The transposed bit plane pictures are then concatenated to generate a single image with eight columns, each column representing a distinct bit plane and each row representing a pixel in the original image.
+The resulting image is saved as a new file with a generated filename starting with 't', and is then passed through an encryption algorithm specified in the "enc_dec.py" file with the mode set to 'e' (encrypt), using the provided password. The encrypted image is then saved with the same generated filename.
