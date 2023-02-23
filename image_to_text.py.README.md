@@ -1,0 +1,4 @@
+# TARP
+This code defines an image to text function that accepts a filename as input. It opens the image file with the PIL (Python Imaging Library) module and then extracts text from it with the pytesseract module.
+First, the path to the Tesseract OCR executable is defined using path to tesseract.  The function then uses Image.open to open the image (filename). It assigns the path to the pytesseract.tesseract cmd and gives the image object to the pytesseract.image to string() function, which extracts text from the image.
+The lang parameter is set to 'eng' to specify the language of the text in the image. The config parameter is set to '--psm 7' to specify the page segmentation mode. The extracted text is stored in the text variable and printed to the console using print(text[:-1]), which slices off the last character (a newline character).
