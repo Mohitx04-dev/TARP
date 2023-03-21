@@ -1,0 +1,2 @@
+# TARP
+This code defines a function called rev_slicing that takes a filename as input. It uses the PIL (Python Imaging Library) module to open the image and crop it into four equal parts horizontally. It then blends these four parts together with Image.blend() to create a new image that is a blend of the four parts. Finally, it saves the blended image back to the original file and uses the image_to_text() function from a separate module called image_to_text.py to extract the text from the image and print it to the console.

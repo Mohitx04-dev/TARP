@@ -1,0 +1,2 @@
+# TARP
+function tti(password, plaintext) takes two arguments, a password and a plaintext message. The function first creates a new RGB image of size 200x200 using the PIL library. Then it draws the plaintext message on the image using a black color. The image is then saved with a generated filename using the filename_generator module. Finally, the transpose() function is called to perform slicing and transposition on the image using the provided password.

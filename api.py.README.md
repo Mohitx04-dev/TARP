@@ -1,0 +1,4 @@
+# TARP/api.py
+This code is a basic command-line interface programme that gives the user two options for text or file encryption and decryption.
+The code imports the tti() and runner() functions from the text_to_image and enc_dec modules, respectively. It prompts the user to enter a password and mode of operation, either encryption or decryption and then executes the appropriate function depending on the mode.
+If the user selects encryption mode, it prompts them to enter plain text to be encrypted and then executes the tti() function with the entered password and plain text as arguments. If the user selects decryption mode, it prompts them to enter the name of the encrypted file to be decrypted, appends the file path, and then executes the runner() function with the entered password, decryption mode, and file path as arguments.
