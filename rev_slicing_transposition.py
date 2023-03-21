@@ -49,4 +49,4 @@ def rev_slicing(filename):
     # fim=im1+im2+im3+im4
     #Shows the image in image viewer
     Image.blend(Image.blend(im1,im2,0.5),Image.blend(im3,im4,0.5),0.5).save(filename)
-    image_to_text(filename)
+    return image_to_text(filename)

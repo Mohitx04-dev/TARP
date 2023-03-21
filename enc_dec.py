@@ -31,7 +31,7 @@ class ImageEncryption():
         for i in progress_bar(numbers, 'Encryption: '):
             encrypted = self.rail_fence_encrypt(encrypted, i)
         new_filename_e = new_filename('e')
-        self.create_and_save_image(encrypted, im.width, im.height, new_filename_e, 'e')
+        return self.create_and_save_image(encrypted, im.width, im.height, new_filename_e, 'e')
         # print('Time:', datetime.now() - start)
 
     def decrypt(self, filename):
@@ -45,7 +45,7 @@ class ImageEncryption():
         new_file = new_filename('d', filename)
         if new_filename:
             self.create_and_save_image(decrypted, im.width, im.height, new_file, 'd')
-            rev_slicing(new_file)
+            return rev_slicing(new_file)
             # print('Time:', datetime.now() - start)
         else:
             print('Error: the path is already taken')
@@ -96,7 +96,7 @@ class ImageEncryption():
         new_image = Image.fromarray(image_array, 'RGB')
         new_image.save(filename)
         if mode == 'e':
-            print(f'Encrypted image saved as {filename}')
+            return (f'Encrypted image saved as {filename}')
         # elif mode == 'd':
         #     print(f'Decrypted image saved as {filename}')
 
@@ -122,9 +122,8 @@ def runner(filename,mode,password):
         return
     if len(password) > 0:
         if mode == 'd' or mode == 'D':
-            ImageEncryption(password).decrypt(filename)
+            return ImageEncryption(password).decrypt(filename)
         else:
-            ImageEncryption(password).encrypt(filename)
+            return ImageEncryption(password).encrypt(filename)
     else:
-        print('Error: empty password')
-        return
+        return ('Error: empty password')

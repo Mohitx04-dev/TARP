@@ -10,5 +10,4 @@ def image_to_text(filename):
     # This function will extract the text from the image
     text = pytesseract.image_to_string(im, lang='eng',config='--psm 7')
     # Displaying the extracted text
-    print(text[:-1])
-    
+    return (text[:-1])

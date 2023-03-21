@@ -55,4 +55,4 @@ def transpose(filename,password):
     cv2.waitKey(0)
     t_filename = new_filename('t')
     cv2.imwrite(t_filename, final)
-    runner(t_filename,'e',password)
+    return runner(t_filename,'e',password)
