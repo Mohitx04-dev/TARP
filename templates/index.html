@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+          crossorigin="anonymous"></script>
+</head>
+<body>
+    <form method="post" id="form">
+        <label for="password">Enter Password/key</label>
+        <input type="password" name="password" /><br />
+        <label for="plaintext">Enter Mode:</label>
+        <select name="mode" id="mode"">
+            <option value="e">Encryption</option>
+            <option value="d">Decryption</option>
+          </select>
+        <br>
+        <label for="data">Enter Plaint Text for Encryption / Filename for Decryption</label>
+        <input type="text" name="data" /><br />
+        <input type="submit" />
+        <br>
+        <textarea class="form-control" rows="8" placeholder="server response"></textarea>
+    </form>
+    <script type="text/javascript">
+        $(document).on('submit','#form',function(e)
+                       {
+          console.log('hello');
+          e.preventDefault();
+          $.ajax({
+            type:'POST',
+            url:"http://127.0.0.1:5000/encrypt",
+            data: $("#form").serialize(),
+            crossDomain: true,
+            success:function(res)
+            {
+              alert(res);
+              $('.form-control').val(res);
+            }
+          })
+        });
+      </script>
+</body>
+</html>
