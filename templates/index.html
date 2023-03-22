@@ -8,6 +8,97 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
           integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
           crossorigin="anonymous"></script>
+  <style>
+ /* Body */
+body {
+font-family: Arial, sans-serif;
+font-size: 16px;
+line-height: 1.5;
+margin: 0;
+padding: 0;
+background-color: #f7f7f7;
+}
+
+/* Form */
+form {
+margin: 20px;
+max-width: 600px;
+margin: auto;
+background-color: white;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0,0,0,.1);
+padding: 30px;
+}
+
+/* Labels */
+label {
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
+color: #333;
+}
+
+/* Inputs */
+input[type="password"],
+input[type="text"],
+select {
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+font-size: 16px;
+padding: 10px;
+width: 100%;
+margin-bottom: 10px;
+}
+
+/* Submit Button */
+input[type="submit"] {
+background-color: #4CAF50;
+border: none;
+color: white;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin-bottom: 10px;
+cursor: pointer;
+border-radius: 4px;
+transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+background-color: #3e8e41;
+}
+
+/* Textarea */
+textarea {
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+font-size: 16px;
+padding: 10px;
+width: 100%;
+margin-bottom: 10px;
+}
+
+/* Error message */
+.error {
+color: red;
+font-size: 14px;
+margin-top: 5px;
+}
+
+/* Success message */
+.success {
+color: green;
+font-size: 14px;
+margin-top: 5px;
+}
+
+
+</style>
+  
 </head>
 <body>
     <form method="post" id="form">
